@@ -1,0 +1,10 @@
+.terraform.*
+terraform.tf*
+node_modules
+package-lock.json
+# Terraform files
+.terraform/
+*.tfstate
+*.tfstate.*
+.terraform.lock.hcl
+.DS_Store
