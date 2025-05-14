@@ -6,6 +6,7 @@ resource "aws_autoscaling_group" "web_asg" {
   desired_capacity = 1
 
   capacity_rebalance = true
+  default_cooldown   = 180
   launch_template {
     id      = aws_launch_template.web_lt.id
     version = "$Latest"
@@ -52,7 +53,7 @@ resource "aws_autoscaling_policy" "request_count_scaling" {
   name                   = "request-count-scaling"
   policy_type            = "TargetTrackingScaling"
   autoscaling_group_name = aws_autoscaling_group.web_asg.name
-
+  cooldown               = 300
   target_tracking_configuration {
     predefined_metric_specification {
       predefined_metric_type = "ALBRequestCountPerTarget"
