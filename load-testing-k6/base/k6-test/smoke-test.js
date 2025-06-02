@@ -7,12 +7,8 @@ export const options = {
 };
 
 export default () => {
-    const urlRes = http.get('http://3.227.12.170:3000/');
+    // Replace 'http://YOUR_EC2_PUBLIC_IP:3000/' with your actual public IP and port
+    const urlRes = http.get('http://YOUR_EC2_PUBLIC_IP:3000/');
     check(urlRes, { 'status is 200': (r) => r.status === 200 });
     sleep(1);
-    // MORE STEPS
-    // Here you can have more steps or complex script
-    // Step1
-    // Step2
-    // etc.
 };

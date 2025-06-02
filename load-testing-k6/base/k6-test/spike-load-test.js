@@ -14,9 +14,4 @@ export default () => {
     const urlRes = http.get('http://app-alb-1865957315.us-east-1.elb.amazonaws.com');
     check(urlRes, { 'status is 200': (r) => r.status === 200 });
     sleep(1);
-    // MORE STEPS
-    // Add only the processes that will be on high demand
-    // Step1
-    // Step2
-    // etc.
 };
