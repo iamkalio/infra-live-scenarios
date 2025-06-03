@@ -41,3 +41,6 @@ and to get secret
 ```Bash
 vault kv get
 ```
+
+## Resources
+
