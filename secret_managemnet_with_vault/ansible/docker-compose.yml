@@ -1,0 +1,12 @@
+service:
+  target:
+    image: ubuntu:22.04
+    container_name: target
+    restart: unless-stopped
+    ports:
+      - "2222:22"
+    privileged: true
+    command: /usr/sbin/sshd -D
+    volumes:
+      - ./setup.sh:/setup.sh
+    entrypoint: ["/bin/bash", "-c", "/setup.sh && /usr/sbin/sshd -D"]
