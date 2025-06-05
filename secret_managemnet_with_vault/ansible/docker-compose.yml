@@ -1,4 +1,4 @@
-service:
+services:
   target:
     image: ubuntu:22.04
     container_name: target
