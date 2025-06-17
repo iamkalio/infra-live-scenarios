@@ -1,3 +1,3 @@
-path "secret/data/my-app/db-creds" {
+path "ansible-secret/data/my-app/db-creds" {
   capabilities = ["read"]
 }
