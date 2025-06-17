@@ -8,3 +8,4 @@ package-lock.json
 *.tfstate.*
 .terraform.lock.hcl
 .DS_Store
+.terragrunt-cache
